@@ -24,6 +24,7 @@ class RVRecetaAdapter(var recetas :List<Recetas>, val onClickReceta: (Recetas) -
 }
 
 class RecetaRV(private val binding: ItemRecetaBinding, val onClickReceta: (Recetas) -> Unit):RecyclerView.ViewHolder(binding.root){
+    // val onToggleFavorite: (Recetas) -> Unit
     fun bind(recetas: Recetas) {
         binding.txtRecetaName.text = recetas.strMeal
         binding.txtRecetaCategory.text = recetas.strCategory
@@ -42,6 +43,10 @@ class RecetaRV(private val binding: ItemRecetaBinding, val onClickReceta: (Recet
         else{
             binding.btnFavorite.setImageResource(R.drawable.ic_favorite_border)
         }
+
+        /*binding.root.setOnClickListener {
+            onToggleFavorite(recetas)
+        }*/
 
         binding.root.setOnClickListener {
             onClickReceta(recetas)//Aqui ya se está ejecutando

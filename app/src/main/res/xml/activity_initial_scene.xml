@@ -32,7 +32,8 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:scaleX="0"
-            android:scaleY="0" />
+            android:scaleY="0"
+            android:alpha="0" />
         <Constraint
             android:id="@+id/icon_logo_white"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +67,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:scaleX="1"
             android:scaleY="1"
-            android:alpha="0"
+            android:alpha="1"
             motion:transitionEasing="cubic(1,0,1,0)" />
         <Constraint
             android:id="@+id/icon_logo_white"
